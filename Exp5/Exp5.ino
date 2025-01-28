@@ -16,8 +16,11 @@
 #include <LiquidCrystal.h>
 
 // Define LCD pins
-const int RS = 2, EN = 3, D4 = 4, D5 = 5, D6 = 6, D7 = 7;
-LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
+// const int RS = 7, EN = 2, D4 = 3, D5 = 4, D6 = 5, D7 = 6;
+// LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
+
+// Define LCD pins (RS, E, D4, D5, D6, D7)
+LiquidCrystal lcd(7, 2, 3, 4, 5, 6);
 
 // Define RFID pins
 #define RST_PIN 9
@@ -29,7 +32,7 @@ SoftwareSerial mySoftwareSerial(8, 9); // RX, TX
 DFRobotDFPlayerMini myDFPlayer;
 
 // Define control pins
-const int solenoidPin = A0; // Solenoid control pin
+const int solenoidPin = 8; // Solenoid control pin
 const int ledRed = A1;      // Red LED
 const int ledBlue = A2;     // Blue LED
 

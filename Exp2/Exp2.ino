@@ -13,8 +13,8 @@
 #include <LiquidCrystal.h>
 
 // Define LCD pins
-const int RS = 2, EN = 3, D4 = 4, D5 = 5, D6 = 6, D7 = 7;
-LiquidCrystal lcd(10, 8, 7, 6, 5, 4);
+const int RS = 10, EN = 8, DB4 = 7, DB5 = 6, DB6 = 5, DB7 = 4;
+LiquidCrystal lcd(RS, EN, DB4, DB5, DB6, DB7);
 
 // Define DS18B20 temperature sensor pins
 #define ONE_WIRE_BUS 12
@@ -22,7 +22,7 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 
 // Define joystick, fan, and LED pins
-const int joystickY = A5;   // Y-axis of the joystick
+const int joystickY = A4;   // Y-axis of the joystick
 const int fanPWM = 3;       // PWM pin for the fan (IRFZ44N)
 const int ledPin = 2;      // Red LED pin
 
