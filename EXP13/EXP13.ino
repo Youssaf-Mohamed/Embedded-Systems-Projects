@@ -13,9 +13,8 @@
      - Line 14: const char* mqtt_user = "MQTT_USERNAME"; // Replace with your MQTT username (if needed)
      - Line 15: const char* mqtt_password = "MQTT_PASSWORD"; // Replace with your MQTT password (if needed)
 
-     by: Youssaf Mohamed Ali 
+     by: Youssaf Mohamed Ali .
 */
-
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <Wire.h>
@@ -105,7 +104,7 @@ void setup() {
     pinMode(pumpPin2, OUTPUT);
 
     // Initialize OLED
-    Wire.begin(25, 22);  
+    Wire.begin(21, 22);  
     if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
         Serial.println(F("Failed to initialize OLED!"));
         for(;;);
